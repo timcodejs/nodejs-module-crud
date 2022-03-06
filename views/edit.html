@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <h2>회원정보 수정</h2>
+        <p class="userid"><%= userid %>님</p>
+        <form action="/member/edit" method="post" name="editForm">
+            <input type="hidden" name="_method" value="put"/>
+            <input type="hidden" name="usergender" value="<%=gender%>"/>
+            <p><label for="userpw">비밀번호 : <input type="test" name="userpw" id="userpw"></label></p>
+            <p><label for="name">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름 : <input type="text" name="name" id="name" value="<%= name %>"></label></p>
+            <p>
+                <label>남 : <input type="radio" name="gender" value="남자"></label>
+                <label>여 : <input type="radio" name="gender" value="여자"></label>
+            </p>
+            <p><input type="submit" value="수정하기"></p>
+        </form>
+        
+        <p class="backBtn"><a href="/member/main">뒤로가기</a></p>
+    </div>
+    <script>
+        let usergender = document.editForm.usergender.value;
+        let gender = document.editForm.gender;
+        for(let i=0; i < gender.length; i++) {
+            if(usergender.trim() == gender[i].value.trim()) {
+                gender[i].checked = true;
+            }
+        }        
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <h2>회원정보 삭제</h2>
+        <form action="/member/delete" method="post">
+            <input type="hidden" name="_method" value="delete" />
+            <p><input type="text" name="userid" placeholder="아이디"></p>
+            <p><input type="submit" value="삭제하기"></p>
+        </form>
+        <p class="backBtn"><a href="/member/main">뒤로가기</a></p>
+    </div>
+</body>
+</html>

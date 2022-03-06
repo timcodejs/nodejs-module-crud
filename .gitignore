@@ -1,0 +1,4 @@
+logs/
+config/development.js
+node_modules/
+package-lock.json

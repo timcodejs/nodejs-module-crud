@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <h2><%=userid%>님 환영합니다.</h2>
+        <ul>
+            <li><a href="/member/edit">회원정보 수정</a></li>
+            <li><a href="/member/delete">회원정보 삭제</a></li>
+        </ul>
+        <p class="logout"><a href="/member/logout" onclick="return logoutBtn()">로그아웃</a></p>
+    </div>
+    <script src="/js/common.js"></script>
+</body>
+</html>
